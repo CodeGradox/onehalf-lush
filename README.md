@@ -1,5 +1,6 @@
-A Lush Theme for Neovim.
+One half for neovim
 ===
 
-See: http://git.io/lush.nvim for more information on Lush and a helper script
-to setup your repo clone.
+This theme is based on the [One half](https://github.com/sonph/onehalf) color scheme.
+
+The plugin was created with the aid of [Lush](https://github.com/rktjmp/lush.nvim).
