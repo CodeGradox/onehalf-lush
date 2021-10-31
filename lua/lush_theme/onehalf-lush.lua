@@ -55,7 +55,7 @@ local c = {
   blue    = "#0184bc",
   purple  = "#a626a4",
   cyan    = "#0997b3",
-  white   = "#fafafa"
+  white   = "#fafafa",
 }
 
 c.fg = c.black
@@ -131,10 +131,10 @@ local theme = lush(function()
     -- QuickFixLine { }, -- Current |quickfix| item in the quickfix window. Combined with |hl-CursorLine| when the cursor is there.
     Search       { fg = c.bg, bg = c.yellow }, -- Last search pattern highlighting (see 'hlsearch').  Also used for similar items that need to stand out.
     SpecialKey   { fg = c.fg }, -- Unprintable characters: text displayed differently from what it really is.  But not 'listchars' whitespace. |hl-Whitespace|
-    SpellBad     { fg = c.red, gui = "" }, -- Word that is not recognized by the spellchecker. |spell| Combined with the highlighting used otherwise.
-    SpellCap     { fg = c.yellow }, -- Word that should start with a capital. |spell| Combined with the highlighting used otherwise.
-    SpellLocal   { fg = c.yellow }, -- Word that is recognized by the spellchecker as one that is used in another region. |spell| Combined with the highlighting used otherwise.
-    SpellRare    { fg = c.yellow }, -- Word that is recognized by the spellchecker as one that is hardly ever used.  |spell| Combined with the highlighting used otherwise.
+    SpellBad     { fg = c.red, gui = "undercurl" }, -- Word that is not recognized by the spellchecker. |spell| Combined with the highlighting used otherwise.
+    SpellCap     { fg = c.yellow, gui = "undercurl" }, -- Word that should start with a capital. |spell| Combined with the highlighting used otherwise.
+    SpellLocal   { fg = c.yellow, gui = "undercurl" }, -- Word that is recognized by the spellchecker as one that is used in another region. |spell| Combined with the highlighting used otherwise.
+    SpellRare    { fg = c.yellow, gui = "undercurl" }, -- Word that is recognized by the spellchecker as one that is hardly ever used.  |spell| Combined with the highlighting used otherwise.
     StatusLine   { fg = c.blue, bg = c.cursor_line }, -- status line of current window
     StatusLineNC { fg = c.comment_fg, bg = c.cursor_line }, -- status lines of not-current windows Note: if this is equal to "StatusLine" Vim will use "^^^" in the status line of the current window.
     TabLine      { fg = c.comment_fg, bg = c.cursor_line }, -- tab pages line, not active tab page label
@@ -253,23 +253,23 @@ local theme = lush(function()
     -- TSConstMacro         { };    -- For constants that are defined by macros: `NULL` in C.
     -- TSError              { };    -- For syntax/parser errors.
     -- TSException          { };    -- For exception related keywords.
-    -- TSField              { };    -- For fields.
+    TSField              { fg = c.fg };    -- For fields.
     -- TSFloat              { };    -- For floats.
-    -- TSFunction           { };    -- For function (calls and definitions).
-    -- TSFuncBuiltin        { };    -- For builtin functions: `table.insert` in Lua.
+    TSFunction           { fg = c.blue };    -- For function (calls and definitions).
+    TSFuncBuiltin        { fg = c.blue };    -- For builtin functions: `table.insert` in Lua.
     -- TSFuncMacro          { };    -- For macro defined fuctions (calls and definitions): each `macro_rules` in Rust.
     -- TSInclude            { };    -- For includes: `#include` in C, `use` or `extern crate` in Rust, or `require` in Lua.
-    -- TSKeyword            { };    -- For keywords that don't fall in previous categories.
-    -- TSKeywordFunction    { };    -- For keywords used to define a fuction.
+    TSKeyword            { fg = c.purple };    -- For keywords that don't fall in previous categories.
+    TSKeywordFunction    { fg = c.purple };    -- For keywords used to define a fuction.
     -- TSLabel              { };    -- For labels: `label:` in C and `:label:` in Lua.
-    -- TSMethod             { };    -- For method calls and definitions.
+    TSMethod             { fg = c.blue };    -- For method calls and definitions.
     -- TSNamespace          { };    -- For identifiers referring to modules and namespaces.
     -- TSNone               { };    -- TODO: docs
     -- TSNumber             { };    -- For all numbers
-    -- TSOperator           { };    -- For any operator: `+`, but also `->` and `*` in C.
-    -- TSParameter          { };    -- For parameters of a function.
+    TSOperator           { fg = c.purple };    -- For any operator: `+`, but also `->` and `*` in C.
+    TSParameter          { fg = c.red };    -- For parameters of a function.
     -- TSParameterReference { };    -- For references to parameters of a function.
-    -- TSProperty           { };    -- Same as `TSField`.
+    TSProperty           { fg = c.fg };    -- Same as `TSField`.
     -- TSPunctDelimiter     { };    -- For delimiters ie: `.`
     -- TSPunctBracket       { };    -- For brackets and parens.
     -- TSPunctSpecial       { };    -- For special punctutation that does not fall in the catagories before.
@@ -277,11 +277,11 @@ local theme = lush(function()
     -- TSString             { };    -- For strings.
     -- TSStringRegex        { };    -- For regexes.
     -- TSStringEscape       { };    -- For escape characters within a string.
-    -- TSSymbol             { };    -- For identifiers referring to symbols or atoms.
+    TSSymbol             { fg = c.cyan, gui = "italic" };    -- For identifiers referring to symbols or atoms.
     -- TSType               { };    -- For types.
     -- TSTypeBuiltin        { };    -- For builtin types.
     -- TSVariable           { };    -- Any variable name that does not have another highlight.
-    -- TSVariableBuiltin    { };    -- Variable names that are defined by the languages, like `this` or `self`.
+    TSVariableBuiltin    { fg = c.cyan, gui = "italic" };    -- Variable names that are defined by the languages, like `this` or `self`.
 
     -- TSTag                { };    -- Tags like html tag names.
     -- TSTagDelimiter       { };    -- Tag delimiter like `<` `>` `/`
