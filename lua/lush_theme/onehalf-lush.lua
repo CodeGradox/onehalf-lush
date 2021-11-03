@@ -166,7 +166,7 @@ local theme = lush(function()
     Statement      { fg = c.purple }, -- (preferred) any statement
     Conditional    { fg = c.purple }, --  if, then, else, endif, switch, etc.
     Repeat         { fg = c.purple }, --   for, do, while, etc.
-    Label          { fg = c.purple }, --    case, default, etc.
+    Label          { fg = c.red }, --    case, default, etc.
     Operator       { fg = c.fg }, -- "sizeof", "+", "*", etc.
     Keyword        { fg = c.red }, --  any other keyword
     Exception      { fg = c.purple }, --  try, catch, throw
@@ -292,6 +292,9 @@ local theme = lush(function()
     -- TSTitle              { };    -- Text that is part of a title.
     -- TSLiteral            { };    -- Literal text.
     -- TSURI                { };    -- Any URI like a link or email.
+
+    -- lukas-reineke/indent-blankline.nvim
+    IndentBlanklineContextChar  { fg = c.purple, gui = "nocombine" } -- Highlight of indent character when base of current context.
 
   }
 end)
