@@ -1,14 +1,34 @@
 One half for neovim
 ===
 
-This theme is based on the [One half](https://github.com/sonph/onehalf) color scheme.
+A light colorscheme for neovim.
+
+![Colorscheme preview](docs/preview.png)
+
+This theme is based on the [One half](https://github.com/sonph/onehalf) color scheme. I have made some slight modifications to suit my personal preferences. I mainly program in Ruby, so the styling will be adjusted to make Ruby syntax look good.
 
 The plugin was created with the aid of [Lush](https://github.com/rktjmp/lush.nvim).
 
 Make sure you have neovim 0.5 with treesitter installed.
 
-You can enable better syntax highlight with the following line.
+Install the colorscheme with your favorite plugin manager. The following example uses Plug.
+
+```vimscript
+call plug#begin('~/.vim/plugged')
+" Colorschemes
+Plug 'rktjmp/lush.nvim'
+Plug 'CodeGradox/onehalf-lush'
+call plug#end()
+
+# Set the color scheme.
+set termguicolors
+set background=light
+colorscheme onehalf-light
 ```
+
+You can enable better syntax highlight with the following line.
+
+```vimscript
 lua <<EOF
 require'nvim-treesitter.configs'.setup {
   highlight = {
@@ -17,5 +37,4 @@ require'nvim-treesitter.configs'.setup {
   },
 }
 EOF
-
 ```
