@@ -11,7 +11,9 @@ The plugin was created with the aid of [Lush](https://github.com/rktjmp/lush.nvi
 
 Make sure you have neovim 0.5 with treesitter installed.
 
-Install the colorscheme with your favorite plugin manager. The following example uses Plug.
+Install the colorscheme with your favorite plugin manager.
+
+Install with Plug in vimscript.
 
 ```vimscript
 call plug#begin('~/.vim/plugged')
@@ -24,6 +26,20 @@ call plug#end()
 set termguicolors
 set background=light
 colorscheme onehalf-light
+```
+
+And here is how you do it with Packer in Lua.
+
+```lua
+return require("packer").startup(function()
+  -- Colorschemes
+  use "rktjmp/lush.nvim"
+  use "CodeGradox/onehalf-lush"
+end)
+
+# Set the color scheme.
+vim.opt.background = "light"
+vim.cmd [[colorscheme onehalf-lush]]
 ```
 
 You can enable better syntax highlight with the following line.
