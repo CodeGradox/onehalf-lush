@@ -45,32 +45,64 @@
 local lush = require('lush')
 local hsl = lush.hsl
 
+local bg = vim.o.background
+if bg == nil then
+  bg = "light"
+  vim.o.background = bg
+end
+
 -- Colors
-local c = {
-  name    = "onehalflight",
-  black   = "#383a42",
-  red     = "#e45649",
-  green   = "#50a14f",
-  yellow  = "#c18401",
-  blue    = "#0184bc",
-  purple  = "#a626a4",
-  cyan    = "#0997b3",
-  white   = "#fafafa",
-}
+local c = {}
 
-c.fg = c.black
-c.bg = c.white
+if bg == "light" then
+  -- One half light
+  c.black   = "#383a42"
+  c.red     = "#e45649"
+  c.green   = "#50a14f"
+  c.yellow  = "#c18401"
+  c.blue    = "#0184bc"
+  c.purple  = "#a626a4"
+  c.cyan    = "#0997b3"
+  c.white   = "#fafafa"
 
-c.comment_fg  = "#a0a1a7"
-c.gutter_bg   = "#fafafa"
-c.gutter_fg   = "#d4d4d4"
-c.non_text    = "#e5e5e5"
+  c.fg = c.black
+  c.bg = c.white
 
-c.cursor_line = "#f0f0f0"
-c.color_col   = "#f0f0f0"
+  c.comment_fg  = "#a0a1a7"
+  c.gutter_bg   = "#fafafa"
+  c.gutter_fg   = "#d4d4d4"
+  c.non_text    = "#e5e5e5"
 
-c.selection   = "#bfceff"
-c.vertsplit   = "#f0f0f0"
+  c.cursor_line = "#f0f0f0"
+  c.color_col   = "#f0f0f0"
+
+  c.selection   = "#bfceff"
+  c.vertsplit   = "#f0f0f0"
+else
+  -- One half dark
+  c.black   = "#282c34"
+  c.red     = "#e06c75"
+  c.green   = "#98c379"
+  c.yellow  = "#e5c07b"
+  c.blue    = "#61afef"
+  c.purple  = "#c678dd"
+  c.cyan    = "#56b6c2"
+  c.white   = "#dcdfe4"
+
+  c.fg = c.white
+  c.bg = c.white
+
+  c.comment_fg  = "#5c6370"
+  c.gutter_bg   = "#282c34"
+  c.gutter_fg   = "#919baa"
+  c.non_text    = "#373C45"
+
+  c.cursor_line = "#313640"
+  c.color_col   = "#313640"
+
+  c.selection   = "#474e5d"
+  c.vertsplit   = "#313640"
+end
 
 -- LSP/Linters mistakenly show `undefined global` errors in the spec, they may
 -- support an annotation like the following. Consult your server documentation.
