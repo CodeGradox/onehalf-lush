@@ -90,7 +90,7 @@ else
   c.white   = "#dcdfe4"
 
   c.fg = c.white
-  c.bg = c.white
+  c.bg = c.black
 
   c.comment_fg  = "#5c6370"
   c.gutter_bg   = "#282c34"
