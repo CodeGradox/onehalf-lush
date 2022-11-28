@@ -19,9 +19,9 @@ if vim.o.background == 'light' then
 
   colors.a_fg = colors.white
   colors.b_fg = colors.gutter_fg
-  colors.b_bg = colors.black
+  colors.b_bg = colors.white
   colors.c_fg = colors.non_text
-  colors.c_bg = colors.black
+  colors.c_bg = colors.white
   colors.fg = colors.black
   colors.bg = colors.white
 else
