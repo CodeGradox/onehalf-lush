@@ -17,11 +17,10 @@ if vim.o.background == 'light' then
   colors.gutter_fg   = "#d4d4d4"
   colors.non_text    = "#e5e5e5"
 
-  colors.a.fg = colors.white
-  colors.a_bg = colors.white
-  colors.a.fg = colors.gutter_fg
+  colors.a_fg = colors.white
+  colors.b_fg = colors.gutter_fg
   colors.b_bg = colors.black
-  colors.a.fg = colors.non_text
+  colors.c_fg = colors.non_text
   colors.c_bg = colors.black
   colors.fg = colors.black
   colors.bg = colors.white
