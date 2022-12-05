@@ -10,6 +10,7 @@ if vim.o.background == 'light' then
   colors.purple  = "#a626a4"
   colors.white   = "#fafafa"
   colors.inactive_bg = "#f0f0f0"
+  colors.inactive_fg = colors.black
 
   colors.a_fg = colors.white
   colors.b_fg = colors.white
@@ -24,13 +25,14 @@ else
   colors.blue    = "#61afef"
   colors.purple  = "#c678dd"
   colors.white   = "#dcdfe4"
-  colors.inactive_bg = "#313640"
 
   colors.a_fg = colors.black
   colors.b_fg = colors.black
   colors.b_bg = colors.white
   colors.c_fg = colors.white
   colors.c_bg = colors.black
+  colors.inactive_bg = "#313640"
+  colors.inactive_fg = colors.white
 end
 
 return {
@@ -60,8 +62,8 @@ return {
     c = { bg = colors.c_bg,   fg = colors.c_fg }
   },
   inactive = {
-    a = { bg = colors.inactive_bg, fg = colors.black, gui = 'bold' },
-    b = { bg = colors.inactive_bg, fg = colors.black },
-    c = { bg = colors.inactive_bg, fg = colors.black },
+    a = { bg = colors.inactive_bg, fg = colors.inactive_fg, gui = 'bold' },
+    b = { bg = colors.inactive_bg, fg = colors.inactive_fg },
+    c = { bg = colors.inactive_bg, fg = colors.inactive_fg },
   }
 }
