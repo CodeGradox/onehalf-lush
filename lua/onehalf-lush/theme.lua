@@ -173,7 +173,7 @@ theme.set_highlights = function(opts)
   hl(0, 'LspReferenceWrite',            { fg = c.none, bg = c.cyan })
 
   -- IndentBlankLine
-  hl(0, 'IndentBlanklineContextChar',  { fg = c.purple, bg = c.none, nocombine = true })
+  hl(0, 'IndentBlanklineContextChar',   { fg = c.purple, bg = c.none, nocombine = true })
   -- These do not seem to work.
   -- hl(0, 'IndentBlanklineContextStart', { fg = c.purple, bg = c.none, nocombine = true })
   -- hl(0, 'IndentBlanklineChar', { fg = c.comment_fg, bg = c.none, nocombine = true })
@@ -181,16 +181,16 @@ theme.set_highlights = function(opts)
   -- hl(0, 'IndentBlanklineSpaceCharBlankline', { fg = c.purple, bg = c.none, nocombine = true })
 
   -- Ruby
-  hl(0, 'rubyStringDelimiter', { fg = c.green, bg = c.none })
-  hl(0, 'rubyKeywordAsMethod', { fg = c.blue, bg = c.none })
-  hl(0, 'slimRuby', { fg = c.blue, bg = c.none })
+  hl(0, 'rubyStringDelimiter',          { fg = c.green, bg = c.none })
+  hl(0, 'rubyKeywordAsMethod',          { fg = c.blue, bg = c.none })
+  hl(0, 'slimRuby',                     { fg = c.blue, bg = c.none })
 end
 
 theme.link_highlight = function()
   -- Legacy groups for official git.vim and diff.vim syntax
-  hl(0, 'diffAdded', { link = 'DiffAdd' })
-  hl(0, 'diffChanged', { link = 'DiffChange' })
-  hl(0, 'diffRemoved', { link = 'DiffDelete' })
+  hl(0, 'diffAdded',                    { link = 'DiffAdd' })
+  hl(0, 'diffChanged',                  { link = 'DiffChange' })
+  hl(0, 'diffRemoved',                  { link = 'DiffDelete' })
 end
 
 return theme
