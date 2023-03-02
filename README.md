@@ -60,6 +60,19 @@ require'nvim-treesitter.configs'.setup {
 }
 ```
 
+# Lualine
+
+There is also a theme for lualine. Note that the colors are determined by the value of `vim.opt.background`. I may fix this in the future, if I can figure out how.
+
+```lua
+require("lualine").setup {
+  options = {
+    theme = "onehalf-lush"
+  }
+}
+
+```
+
 # Credits
 
 This package was originally written to be compatible with Lush. When the Lush template stopped working, the plugin was rewritten to work without Lush. I have copied [mofiguls](http://github.com/mofiqul) vscode plugin to get the hightlight groups, so credits to them for making it possible to easily extend their colorscheme.
