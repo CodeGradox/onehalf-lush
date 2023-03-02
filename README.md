@@ -9,19 +9,44 @@ This theme is based on the [One half](https://github.com/sonph/onehalf) color sc
 
 Make sure you have neovim 0.8 with treesitter installed.
 
+# Installation
+
 Install the colorscheme with your favorite plugin manager.
 
-And here is how you do it with Packer in Lua.
-
 ```lua
+-- Lazy
+return {
+  "CodeGradox/onehalf-lush",
+  lazy = false,
+  priority = 1000,
+  config = function()
+    vim.api.nvim_set_option("background", "light")
+    vim.cmd("colorscheme onehalf-lush")
+  end
+}
+
+-- Packer
 return require("packer").startup(function()
   use "CodeGradox/onehalf-lush"
 end)
 
+
+vim.api.nvim_set_option("background", "light")
+vim.cmd("colorscheme onehalf-lush")
+```
+
+# Set up the theme
+
+Select between light and dark theme.
+
+```lua
 -- Set the color scheme.
--- Dark background also works!
-vim.opt.background = "light"
-vim.cmd [[colorscheme onehalf-lush]]
+vim.api.nvim_set_option("background", "light")
+vim.cmd("colorscheme onehalf-lush")
+
+-- Set the dark colorscheme
+vim.api.nvim_set_option("background", "dark")
+vim.cmd("colorscheme onehalf-lush-dark")
 ```
 
 You can enable better syntax highlight with the following line.
