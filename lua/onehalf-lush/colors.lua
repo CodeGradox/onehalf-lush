@@ -1,54 +1,55 @@
-local colors = {}
-
-colors.none = 'NONE'
+local M = {}
 
 -- The colors are taken from https://github.com/sonph/onehalf.
-if vim.o.background == 'light' then
-  colors.black   = "#383a42"
-  colors.red     = "#e45649"
-  colors.green   = "#50a14f"
-  colors.yellow  = "#c18401"
-  colors.blue    = "#0184bc"
-  colors.purple  = "#a626a4"
-  colors.cyan    = "#0997b3"
-  colors.white   = "#fafafa"
+M.light = {
+  none        = "NONE",
+  black       = "#383a42",
+  red         = "#e45649",
+  green       = "#50a14f",
+  yellow      = "#c18401",
+  blue        = "#0184bc",
+  purple      = "#a626a4",
+  cyan        = "#0997b3",
+  white       = "#fafafa",
 
-  colors.fg = colors.black
-  colors.bg = colors.white
+  comment_fg  = "#a0a1a7",
+  gutter_bg   = "#fafafa",
+  gutter_fg   = "#d4d4d4",
+  non_text    = "#e5e5e5",
 
-  colors.comment_fg  = "#a0a1a7"
-  colors.gutter_bg   = "#fafafa"
-  colors.gutter_fg   = "#d4d4d4"
-  colors.non_text    = "#e5e5e5"
+  cursor_line = "#f0f0f0",
+  color_col   = "#f0f0f0",
 
-  colors.cursor_line = "#f0f0f0"
-  colors.color_col   = "#f0f0f0"
+  selection   = "#bfceff",
+  vertsplit   = "#f0f0f0",
+}
 
-  colors.selection   = "#bfceff"
-  colors.vertsplit   = "#f0f0f0"
-else
-  colors.black   = "#282c34"
-  colors.red     = "#e06c75"
-  colors.green   = "#98c379"
-  colors.yellow  = "#e5c07b"
-  colors.blue    = "#61afef"
-  colors.purple  = "#c678dd"
-  colors.cyan    = "#56b6c2"
-  colors.white   = "#dcdfe4"
+M.light.fg = M.light.black
+M.light.bg = M.light.white
 
-  colors.fg = colors.white
-  colors.bg = colors.black
+M.dark = {
+  black   = "#282c34",
+  red     = "#e06c75",
+  green   = "#98c379",
+  yellow  = "#e5c07b",
+  blue    = "#61afef",
+  purple  = "#c678dd",
+  cyan    = "#56b6c2",
+  white   = "#dcdfe4",
 
-  colors.comment_fg  = "#5c6370"
-  colors.gutter_bg   = "#282c34"
-  colors.gutter_fg   = "#919baa"
-  colors.non_text    = "#373C45"
+  comment_fg  = "#5c6370",
+  gutter_bg   = "#282c34",
+  gutter_fg   = "#919baa",
+  non_text    = "#373C45",
 
-  colors.cursor_line = "#313640"
-  colors.color_col   = "#313640"
+  cursor_line = "#313640",
+  color_col   = "#313640",
 
-  colors.selection   = "#474e5d"
-  colors.vertsplit   = "#313640"
-end
+  selection   = "#474e5d",
+  vertsplit   = "#313640",
+}
 
-return colors
+M.dark.fg = M.dark.white
+M.dark.bg = M.dark.black
+
+return M

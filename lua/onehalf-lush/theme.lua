@@ -1,12 +1,12 @@
-local c = require('onehalf-lush.colors')
-
+local colors = require('onehalf-lush.colors')
 local hl = vim.api.nvim_set_hl
-local theme = {}
+
+local M = {}
 
 -- Set highlight groups.
-theme.set_highlights = function(opts)
-  c = vim.tbl_extend('force', c, opts['color_overrides'])
-  local is_dark = vim.o.background == 'dark'
+function M.setup(variant)
+  local is_dark = variant == "dark"
+  local c = is_dark and colors.dark or colors.light
 
   hl(0, 'ColorColumn',                  { fg = c.none, bg = c.color_col })
   hl(0, 'Comment',                      { fg = c.comment_fg, bg = c.none, italic = true })
@@ -186,11 +186,11 @@ theme.set_highlights = function(opts)
   hl(0, 'slimRuby',                     { fg = c.blue, bg = c.none })
 end
 
-theme.link_highlight = function()
+function M.link_highlight()
   -- Legacy groups for official git.vim and diff.vim syntax
   hl(0, 'diffAdded',                    { link = 'DiffAdd' })
   hl(0, 'diffChanged',                  { link = 'DiffChange' })
   hl(0, 'diffRemoved',                  { link = 'DiffDelete' })
 end
 
-return theme
+return M
