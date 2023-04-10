@@ -187,6 +187,24 @@ function M.setup(variant)
 end
 
 function M.link_highlight()
+  -- LSP Semantic Token Groups
+  hl(0, "@lsp.type.comment",                    { link = "@comment" })
+  hl(0, "@lsp.type.enum",                       { link = "@type" })
+  hl(0, "@lsp.type.interface",                  { link = "Identifier" })
+  hl(0, "@lsp.type.keyword",                    { link = "@keyword" })
+  hl(0, "@lsp.type.namespace",                  { link = "@namespace" })
+  hl(0, "@lsp.type.parameter",                  { link = "@parameter" })
+  hl(0, "@lsp.type.property",                   { link = "@property" })
+  hl(0, "@lsp.type.variable", {}) -- use treesitter styles for regular variables
+  hl(0, "@lsp.typemod.method.defaultLibrary",   { link = "@function.builtin" })
+  hl(0, "@lsp.typemod.function.defaultLibrary", { link = "@function.builtin" })
+  hl(0, "@lsp.typemod.operator.injected",       { link = "@operator" })
+  hl(0, "@lsp.typemod.string.injected",         { link = "@string" })
+  hl(0, "@lsp.typemod.variable.defaultLibrary", { link = "@variable.builtin" })
+  hl(0, "@lsp.typemod.variable.injected",       { link = "@variable" })
+
+  -- NOTE: maybe add these with distinct highlights?
+  -- ["@lsp.typemod.variable.globalScope"] (global variables)
   -- Legacy groups for official git.vim and diff.vim syntax
   hl(0, 'diffAdded',                    { link = 'DiffAdd' })
   hl(0, 'diffChanged',                  { link = 'DiffChange' })
