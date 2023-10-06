@@ -184,6 +184,25 @@ function M.setup(variant)
   hl(0, 'rubyStringDelimiter',          { fg = c.green, bg = c.none })
   hl(0, 'rubyKeywordAsMethod',          { fg = c.blue, bg = c.none })
   hl(0, 'slimRuby',                     { fg = c.blue, bg = c.none })
+
+  -- nvim-notify
+  hl(0, "NotifyERRORBorder",            { fg = c.red,        bg = c.none })
+  hl(0, "NotifyWARNBorder",             { fg = c.yellow,     bg = c.none })
+  hl(0, "NotifyINFOBorder",             { fg = c.blue,       bg = c.none })
+  hl(0, "NotifyDEBUGBorder",            { fg = c.comment_fg, bg = c.none })
+  hl(0, "NotifyTRACEBorder",            { fg = c.purple,     bg = c.none })
+  hl(0, "NotifyERRORIcon",              { fg = c.red,        bg = c.none })
+  hl(0, "NotifyWARNIcon",               { fg = c.yellow,     bg = c.none })
+  hl(0, "NotifyINFOIcon",               { fg = c.blue,       bg = c.none })
+  hl(0, "NotifyDEBUGIcon",              { fg = c.comment_fg, bg = c.none })
+  hl(0, "NotifyTRACEIcon",              { fg = c.purple,     bg = c.none })
+  hl(0, "NotifyERRORTitle",             { fg = c.fg,         bg = c.none })
+  hl(0, "NotifyWARNTitle",              { fg = c.fg,         bg = c.none })
+  hl(0, "NotifyINFOTitle",              { fg = c.fg,         bg = c.none })
+  hl(0, "NotifyDEBUGTitle",             { fg = c.fg,         bg = c.none })
+  hl(0, "NotifyTRACETitle",             { fg = c.fg,         bg = c.none })
+
+
 end
 
 function M.link_highlight()
