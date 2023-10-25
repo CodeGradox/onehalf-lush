@@ -24,8 +24,9 @@ M.light = {
   vertsplit   = "#f0f0f0",
 }
 
-M.light.fg = M.light.black
-M.light.bg = M.light.white
+M.light.fg   = M.light.black
+M.light.bg   = M.light.white
+M.light.text = M.light.black
 
 M.dark = {
   black   = "#282c34",
@@ -49,7 +50,8 @@ M.dark = {
   vertsplit   = "#313640",
 }
 
-M.dark.fg = M.dark.white
-M.dark.bg = M.dark.black
+M.dark.fg   = M.dark.white
+M.dark.bg   = M.dark.black
+M.dark.text = M.dark.white
 
 return M
