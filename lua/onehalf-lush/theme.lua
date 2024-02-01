@@ -4,6 +4,9 @@ local hl = vim.api.nvim_set_hl
 local M = {}
 
 -- Set highlight groups.
+--
+-- List of highlight groups:
+-- https://github.com/nvim-treesitter/nvim-treesitter/blob/master/CONTRIBUTING.md
 function M.setup(variant)
   local is_dark = variant == "dark"
   local c = is_dark and colors.dark or colors.light
@@ -139,6 +142,7 @@ function M.setup(variant)
   hl(0, '@include',                     { fg = c.purple, bg = c.none })
   hl(0, '@variable',                    { fg = is_dark and c.white or c.black, bg = c.none })
   hl(0, '@variable.builtin',            { fg = c.cyan, bg = c.none, italic = true })
+  hl(0, '@variable.member.ruby',        { fg = c.red, bg = c.none })
   hl(0, '@text',                        { fg = c.text, bg = c.none })
   hl(0, '@text.underline',              { fg = c.text, bg = c.none, underline = true })
   hl(0, '@tag',                         { fg = c.fg, bg = c.none })
