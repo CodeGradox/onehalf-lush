@@ -142,7 +142,6 @@ function M.setup(variant)
   hl(0, '@include',                     { fg = c.purple, bg = c.none })
   hl(0, '@variable',                    { fg = is_dark and c.white or c.black, bg = c.none })
   hl(0, '@variable.builtin',            { fg = c.cyan, bg = c.none, italic = true })
-  hl(0, '@variable.member.ruby',        { fg = c.red, bg = c.none })
   hl(0, '@text',                        { fg = c.text, bg = c.none })
   hl(0, '@text.underline',              { fg = c.text, bg = c.none, underline = true })
   hl(0, '@tag',                         { fg = c.fg, bg = c.none })
@@ -185,9 +184,11 @@ function M.setup(variant)
   -- hl(0, 'IndentBlanklineSpaceCharBlankline', { fg = c.purple, bg = c.none, nocombine = true })
 
   -- Ruby
+  hl(0, '@variable.member.ruby',        { fg = c.red,   bg = c.none })
+  hl(0, '@string.special.symbol.ruby',  { fg = c.cyan,  bg = c.none, italic = true })
   hl(0, 'rubyStringDelimiter',          { fg = c.green, bg = c.none })
-  hl(0, 'rubyKeywordAsMethod',          { fg = c.blue, bg = c.none })
-  hl(0, 'slimRuby',                     { fg = c.blue, bg = c.none })
+  hl(0, 'rubyKeywordAsMethod',          { fg = c.blue,  bg = c.none })
+  hl(0, 'slimRuby',                     { fg = c.blue,  bg = c.none })
 
   -- nvim-notify
   hl(0, "NotifyERRORBorder",            { fg = c.red,        bg = c.none })
