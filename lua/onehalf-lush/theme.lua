@@ -174,6 +174,7 @@ function M.setup(variant)
   hl(0, 'LspReferenceText',             { fg = c.none, bg = c.cyan })
   hl(0, 'LspReferenceRead',             { fg = c.none, bg = c.cyan })
   hl(0, 'LspReferenceWrite',            { fg = c.none, bg = c.cyan })
+  hl(0, 'LspCodeLens',                  { fg = c.comment_fg, bg = c.none })
 
   -- IndentBlankLine
   hl(0, 'IndentBlanklineContextChar',   { fg = c.purple, bg = c.none, nocombine = true })
