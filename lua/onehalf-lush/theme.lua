@@ -174,7 +174,6 @@ function M.setup(variant)
   hl(0, 'LspReferenceText',             { fg = c.none, bg = c.cyan })
   hl(0, 'LspReferenceRead',             { fg = c.none, bg = c.cyan })
   hl(0, 'LspReferenceWrite',            { fg = c.none, bg = c.cyan })
-  hl(0, 'LspCodeLens',                  { fg = c.comment_fg, bg = c.none })
 
   -- IndentBlankLine
   hl(0, 'IndentBlanklineContextChar',   { fg = c.purple, bg = c.none, nocombine = true })
@@ -208,7 +207,16 @@ function M.setup(variant)
   hl(0, "NotifyDEBUGTitle",             { fg = c.fg,         bg = c.none })
   hl(0, "NotifyTRACETitle",             { fg = c.fg,         bg = c.none })
 
-
+  -- nvim-cmp
+  -- Colors for the completion menu
+  hl(0, "CmpItemAbbrDeprecated",        { bg = c.none, fg = c.yellow, strikethrough = true })
+  hl(0, "CmpItemKindVariable",          { link = "@variable" })
+  hl(0, "CmpItemKindInterface",         { link = "@identifier" })
+  hl(0, "CmpItemKindFunction",          { link = "@function" })
+  hl(0, "CmpItemKindMethod",            { link = "@function" })
+  hl(0, "CmpItemKindKeyword",           { link = "@keyword" })
+  hl(0, "CmpItemKindProperty",          { link = "@property" })
+  hl(0, "CmpItemKindText",              { link = "@text" })
 end
 
 function M.link_highlight()
