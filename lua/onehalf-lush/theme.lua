@@ -82,6 +82,8 @@ function M.setup(variant)
   vim.api.nvim_set_hl(0, 'Define',                       { fg = c.purple, bg = c.none })
   vim.api.nvim_set_hl(0, 'Exception',                    { fg = c.purple, bg = c.none })
   vim.api.nvim_set_hl(0, 'Float',                        { fg = c.yellow, bg = c.none })
+  -- Used by nvim-cmp when showing documentation. Also used by vim.lsp.buf.hover.
+  vim.api.nvim_set_hl(0, 'NormalFloat',                  { fg = c.none, bg = c.cursor_line })
   vim.api.nvim_set_hl(0, 'Function',                     { fg = c.blue, bg = c.none })
   vim.api.nvim_set_hl(0, 'Include',                      { fg = c.purple, bg = c.none })
   vim.api.nvim_set_hl(0, 'Keyword',                      { fg = c.red, bg = c.none })
