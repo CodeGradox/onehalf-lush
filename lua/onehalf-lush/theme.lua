@@ -208,13 +208,17 @@ function M.setup(variant)
 
   -- nvim-cmp
   -- Colors for the completion menu
-  vim.api.nvim_set_hl(0, "CmpItemAbbrDeprecated",        { fg = c.yellow, bg = c.none, strikethrough = true })
   vim.api.nvim_set_hl(0, "CmpItemKindVariable",          { fg = is_dark and c.white or c.black, bg = c.none  })
-  vim.api.nvim_set_hl(0, "CmpItemKindInterface",         { fg = c.yellow, bg = c.none })
-  vim.api.nvim_set_hl(0, "CmpItemKindFunction",          { fg = c.blue, bg = c.none })
-  vim.api.nvim_set_hl(0, "CmpItemKindMethod",            { fg = c.blue, bg = c.none })
+  vim.api.nvim_set_hl(0, "CmpItemKindClass",             { fg = c.yellow, bg = c.none })
+  vim.api.nvim_set_hl(0, "CmpItemKindStruct",            { fg = c.yellow, bg = c.none })
+  vim.api.nvim_set_hl(0, "CmpItemKindModule",            { fg = c.yellow, bg = c.none })
+  vim.api.nvim_set_hl(0, "CmpItemAbbrDeprecated",        { fg = c.yellow, bg = c.none, strikethrough = true })
+  vim.api.nvim_set_hl(0, "CmpItemKindField",             { fg = c.blue, bg = c.none })
+  vim.api.nvim_set_hl(0, "CmpItemKindProperty",          { fg = c.blue, bg = c.none })
+  vim.api.nvim_set_hl(0, "CmpItemKindInterface",         { fg = c.cyan, bg = c.none })
+  vim.api.nvim_set_hl(0, "CmpItemKindFunction",          { fg = c.purple, bg = c.none })
+  vim.api.nvim_set_hl(0, "CmpItemKindMethod",            { fg = c.purple, bg = c.none })
   vim.api.nvim_set_hl(0, "CmpItemKindKeyword",           { fg = c.red, bg = c.none })
-  vim.api.nvim_set_hl(0, "CmpItemKindProperty",          { fg = c.fg, bg = c.none })
   vim.api.nvim_set_hl(0, "CmpItemKindText",              { fg = c.text, bg = c.none })
 end
 
