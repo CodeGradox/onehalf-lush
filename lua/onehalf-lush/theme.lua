@@ -176,6 +176,10 @@ function M.setup(variant)
   vim.api.nvim_set_hl(0, 'LspReferenceRead',             { fg = c.none, bg = c.cyan })
   vim.api.nvim_set_hl(0, 'LspReferenceWrite',            { fg = c.none, bg = c.cyan })
 
+  -- Fixes performance bug when CurSearch is used.
+  -- https://github.com/neovim/neovim/issues/23590
+  vim.api.nvim_set_hl(0, 'CurSearch', { link = 'Search'})
+
   -- IndentBlankLine
   vim.api.nvim_set_hl(0, 'IndentBlanklineContextChar',   { fg = c.purple, bg = c.none, nocombine = true })
   -- These do not seem to work.
